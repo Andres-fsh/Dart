@@ -1,4 +1,5 @@
 import 'dart:io';
+import 'dart:math';
 
 void main(List<String> args) {
   //ANDRÉS FELIPE SÁNCHEZ H
@@ -11,27 +12,34 @@ Val                     Num
 0                   Cualquier número
   */
 //ASIGNACION VBLES
-int num1, num2;
-int tipoVariable;
-double funcion;
+double variable;
+double tipoVariable;
+double resultado;
+num exponente;
 //ENTRADA ALG
-print("Ingrese valor de la variable 1:");
-num1 = stdin.readLineSync();
-print("Ingrese valor de la variable 1:");
-num2 = stdin.readLineSync();
+print("Ingrese valor de la variable:");
+variable = double.parse(stdin.readLineSync()!);
+print("Ingrese clave para realizar la operación matemática");
+tipoVariable = double.parse(stdin.readLineSync()!);
 //PROCESO
 switch(tipoVariable){
 case 1:
-funcion = 100*num2;
+resultado = 100*variable;
+print("El resultado es: $resultado");
+print("la clave ingresada es $tipoVariable");
 break;
 case 2:
-funcion = 100^num2;
+exponente = pow(100, variable);
+print("El resultado es: $exponente");
+print("la clave ingresada es $tipoVariable");
 break;
 case 3:
-funcion = 100/num2;
+resultado = 100/variable;
+print("El resultado es: $resultado");
+print("la clave ingresada es $tipoVariable");
 break;
 default:
-funcion = 0;
+resultado = 0;
 print("No se puede realizar la operación");
 break;
 }
