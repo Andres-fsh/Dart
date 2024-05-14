@@ -5,12 +5,16 @@ void main(List<String> args) {
   /*
   Leer 10 números e imprimir solamente los números positivos
   */
+  int cantNumeros = 10;
   double num;
-  int suma=0;
-  int cantNum=10;
-  print("Ingresa 10 números enteros");
+  num =0;
+    for(int i=0; i < cantNumeros; i++){
+  print("Ingresa 10 números enteros" +(i+1).toString());
   num = double.parse(stdin.readLineSync()!);
-  for(int i=0; i < cantNum; i++){
-  
-}
-}
+   }
+      if(num > 0){
+      print("El numero es positivo $num");
+    }else{
+      print("El numero es negativo");
+    }
+  }

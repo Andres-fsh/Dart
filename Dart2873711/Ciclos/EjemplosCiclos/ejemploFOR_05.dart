@@ -21,5 +21,6 @@ void main(List<String> args) {
     print("Aprobó trimestre");
   }else{
   print("Desaprobó trimestre");
-  }
-}
+ 
+ }
+ }

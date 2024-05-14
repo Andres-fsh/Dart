@@ -1,10 +1,12 @@
 //Hacer un algoritmo que imprima el nombre de un artículo, clave, precio original y su precio con descuento. El descuento lo hace en base a la clave, si la clave es 1 el descuento es del 10% y si la clave es 2 el descuento en del 20% (solo existen dos claves).
+// ignore_for_file: unused_local_variable
+
 import 'dart:io';
 
 void main (List<String> args) {
   //ANDRES FELIPE SÁNCHEZ
   //DEFINICIÓN VBLES
-  string? nombre;
+  String? nombre;
   int clave;
   double precio, precioFinal, descuento;
   //ENTRADA ALG
@@ -14,6 +16,7 @@ void main (List<String> args) {
   clave = int.parse(stdin.readLineSync()!);
   print("Ingrese el precio del producto");
   precio = double.parse(stdin.readLineSync()!);
+  precioFinal = 0;
 
   //PROCESO ALG
   
