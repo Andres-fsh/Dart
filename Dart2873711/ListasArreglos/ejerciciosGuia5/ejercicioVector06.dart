@@ -20,13 +20,13 @@ void main(List<String> args) {
     vectorB.add(num);
 } 
   for (var i = 0; i < cantNumeros; i++) {
-    vectorC.add(vectorA[i] * vectorB[i]);
+    vectorC.add(vectorA[i] * vectorB.reversed.elementAt(i));
   }   
   print("La lista A es:");
   print(vectorA);
   print("La lista B es:");
   print(vectorB);
   print("*" * 30);
-  print("La nueva lista C es:"); //PENDIENTE POR RESULTADO
+  print("La nueva lista C es:");
   print(vectorC);
 }
