@@ -1,6 +1,5 @@
-import 'dart:html';
+
 import 'dart:io';
-import 'dart:math';
 
 void main(List<String> args) {
   //ANDRÉS FELIPE SÁNCHEZ H
@@ -17,44 +16,27 @@ Diseñe el programa que lea el nombre del granjero, el tipo de fumigación solic
 Se debe imprimir el nombre del granjero y la cuenta total.
   */
 
-//ASIGNACIÓN VBLES
-int cantHa, tipoFumigacion;
-double descuento, cuentaTotal;
-String? nombreGranjero;
+//DECLARACION VARIABLES
+  double horasTrabajadas, horaExtra, pagoHora, pagoTotal;
 
-//ENTRADA ALG
-print("Ingrese nombre de usuario:");
-nombreGranjero = stdin.readLineSync();
-print("Ingrese la cantidad de hectáreas (Ha) que desea fumigar:");
-cantHa=stdin.readLineSync();
-print("De acuerdo a los siguientes tipos digite en numero que opción desea= Tipo 1: Fumigación contra malas hierbas// Tipo 2: Fumigación contra moscas y mosquitos// Tipo 3: Fumigación contra gusanos // Tipo 4: Fumigación contra todo lo anterior");
-tipoFumigacion=stdin.readLineSync();
+  //ASINACION VARIABLES
+  pagoHora = 16;
 
-//PROCESO
-if (cantHa >= 100){
-  descuento= 0.05;
-}
-if (cuentaTotal >= 1000000){
-  descuento = 0.1;
-}
-if (cantHa >= 100 && cuentaTotal >= 1000000){
-  descuento = 0.05;
-}
-switch(tipoFumigacion){
-  case 1:
-  cuentaTotal= cantHa*50000*descuento;
-  print("La cuenta del señor $nombreGranjero es de $cuentaTotal");
-  break;
-  case 2:
-  cuentaTotal= cantHa*70000*descuento;
-  print("La cuenta del señor $nombreGranjero es de $cuentaTotal");
-  break;
-  case 3:
-  cuentaTotal= cantHa*80000*descuento;
-  print("La cuenta del señor $nombreGranjero es de $cuentaTotal");
-  case 4:
-  cuentaTotal= cantHa*190000*descuento;
-  print("La cuenta del señor $nombreGranjero es de $cuentaTotal");
-}
+  //ENTRADA DATOS 
+  print("Ingrese numero de horas trabajadas");
+  horasTrabajadas = double.parse(stdin.readLineSync()!);
 
+  //PROCESOS - FORMULAS
+  if ( horasTrabajadas <= 40 ) { 
+    pagoTotal = horasTrabajadas * pagoHora;
+    print("El salario a pagar es de 16 US por hora ");
+    print("El salario a pagar por las $horasTrabajadas horas es de: $pagoTotal usd");
+  }
+  else {
+    horaExtra = horasTrabajadas - 40; 
+    pagoTotal = (horaExtra * 20) + (40 * pagoHora);
+    print("El salario a pagar es de 16 US por hora");
+    print("La hora extra es de 20 US");
+    print("Su pago es de $pagoTotal US");
+  }
   }

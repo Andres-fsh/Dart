@@ -8,7 +8,7 @@ void main(List<String> args) {
   //DEFINICIÓN DE VARIABLES
 double num1, num2;
   //ENTRADA
-  print("Digite el número 1 y 2");
+  print("Digite dos números enteros");
   num1 = double.parse(stdin.readLineSync()!);
   num2 = double.parse(stdin.readLineSync()!);  if(num1 > num2){
     print("$num2, $num1");

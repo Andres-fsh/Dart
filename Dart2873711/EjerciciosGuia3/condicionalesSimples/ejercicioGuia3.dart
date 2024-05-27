@@ -6,6 +6,7 @@ void main (List<String> args){
     El jefe del personal de operación de la industria aceitera Móvil desea calcular el sueldo neto de sus empleados bajo las siguientes normas, solicitar el nombre del empleado, número de horas trabajadas y la cuota por hora trabajada, para calcular el sueldo neto del empleado, se le otorga un incentivo del  5%  si  el  empleado  trabajó  más  de  40  horas.  Imprimir  el  nombre  del  empleado  y  su  sueldo. Desarrollar el algoritmoy diagrama de flujo.
   */
   //DEFINICIÓN VBLES
+  // ignore: unused_local_variable
   String? nombre;
   double horasTrabajadas, cuotaHora, sueldo, incentivos;
   //ENTRADA ALG
@@ -24,5 +25,5 @@ void main (List<String> args){
   }
   //SALIDA ALG
   print("El nombre del empleado es: ");
-  print("El sueldo neto es: $sueldo");
+  print("El sueldo neto es: $sueldo"); 
 }

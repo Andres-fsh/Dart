@@ -14,37 +14,130 @@ EDAD                            NIVEL HEMOGLOBINA
 mujeres > 15 años               12 - 16 g%
 hombres > 15 años               14 - 18g%
 */
-//DEFINICIÓN VBLES
-int edad;
-double nivelHemoglobina;
-String resultado, genero, opcionEdad;
-//ENTRADA ALG
-print("La persona es mayor a un año? SI(S) - NO (N)");
-opcionEdad = stdin.readLineSync();
-edad = int.parse(stdin.readLineSync()!);
-print("Cuál es su edad");
-genero = stdin.readLineSync();
-print("Cuál es su nivel de hemoglobina");
-nivelHemoglobina = double.parse(stdin.readLineSync()!);
-//PROCESO
-if(opcionEdad.toUpperCase() == "SI"){
-  print("Ingrese su edad en años");
-  edad = int.parse(stdin.readLineSync()!);
-  if (edad >1 && edad <=5){ //menor o igual a 5
-  if(nivelHemoglobina< 11.5){
-    resultado = "Anemia";
-  } else if (nivelHemoglobina > 15){
-    resultado = "Cardiopatia";
-  } else {
-    resultado ="normal";
+//DECLARACION VARIABLES
+  int     edad; 
+  double  nivelHemoglobina;
+  String?  resultado, genero, opcionEdad;
+
+  //ENTRADA DATOS
+  print("La persona es mayor a un año ? Si(SI) - NO(NO)");
+  opcionEdad = stdin.readLineSync(); 
+  print("Cual es su genero Hombre(H) y Mujer(M)");
+  genero = stdin.readLineSync();
+  print("Cual es su nivel de Hemoglobina");
+  nivelHemoglobina = double.parse(stdin.readLineSync()!);
+
+  //PROCESO - FORMULAS
+  if (opcionEdad?.toUpperCase() == "SI") {
+    print("Ingrese la edad del usuario en años");
+    edad = int.parse(stdin.readLineSync()!);
+
+    if (edad <= 5) {
+      if (nivelHemoglobina < 11.5) {
+      resultado = "Anemia";
+      }
+      else if (nivelHemoglobina > 15) {
+      resultado = "Cardiopatía";
+      }
+      else {
+        resultado = "Normal";
+      }
+    }
+
+    else if (edad <= 10) {
+      if (nivelHemoglobina < 12) {
+      resultado = "Anemia";
+      }
+      else if (nivelHemoglobina > 15.5) {
+      resultado = "Cardiopatía";
+      }
+      else {
+        resultado = "Normal";
+      }
+    }
+
+    else if (edad <= 15) {
+        if (nivelHemoglobina < 13) {
+      resultado = "Anemia";
+      }
+      else if (nivelHemoglobina > 15.5) {
+      resultado = "Cardiopatía";
+      }
+      else {
+        resultado = "Normal";
+      }
+    }
+
+    else {
+      if (genero?.toUpperCase() == "MUJER") {
+        if (nivelHemoglobina < 12) {
+        resultado = "Anemia";
+        }
+          else if (nivelHemoglobina > 16) {
+          resultado = "Cardiopatía";
+          }
+        else {
+          resultado = "Normal";
+        }
+      }
+
+      else {
+         if (nivelHemoglobina < 14) {
+      resultado = "Anemia";
+      }
+      else if (nivelHemoglobina > 18) {
+      resultado = "Cardiopatía";
+      }
+      else {
+        resultado = "Normal";
+      } 
+      }
+    }
   }
-  } else if (edad <=10){//edad <= 10 y edad <=15
-    if(nivelHemoglobina<12.6){
-      resultado = "cardiopatía";
-    } else if (nivelHemoglobina >15)
+
+  else {
+    print("Ingrese la edad del usuario en meses");
+    edad = int.parse(stdin.readLineSync()!);
+
+    if (edad > 0 && edad <= 1) {
+
+      if (nivelHemoglobina < 13) {
+      resultado = "Anemia";
+      }
+      else if (nivelHemoglobina > 26) {
+      resultado = "Cardiopatía";
+      }
+      else {
+        resultado = "Normal";
+      }
+    }
+
+     else if (edad > 1 && edad <= 6) {
+      
+      if (nivelHemoglobina < 10) {
+      resultado = "Anemia";
+      }
+      else if (nivelHemoglobina > 18) {
+      resultado = "Cardiopatía";
+      }
+      else {
+        resultado = "Normal";
+      }
+    }
+
+     else {
+      
+      if (nivelHemoglobina < 11) {
+      resultado = "Anemia";
+      }
+      else if (nivelHemoglobina > 15) {
+      resultado = "Cardiopatía";
+      }
+      else {
+        resultado = "Normal";
+      }
+    }
   }
+
+  print("Su estado de salud es: $resultado");
   }
-} else{
-  print("Ud es un baby");
-}
-}

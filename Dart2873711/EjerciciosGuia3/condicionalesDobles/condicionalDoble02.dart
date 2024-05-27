@@ -7,17 +7,26 @@ void main(List<String> args) {
   Si trabaja 40 horas o menos se le paga $16 por hora
   Si trabaja más de 40 horas se le paga $16 por cada una de las primeras 40 horas y $20 por cada hora extra.
   */
-  //DEFINICIÓN VBLES
-  double salario;
-  int hora, horaExtra, horasTrabajadas;
-  //ENTRADA
-  print("Introduzca las horas trabajadas");
-  horasTrabajadas = int.parse(stdin.readLineSync()!);
-  if(horasTrabajadas <= 40){
-    salario = horasTrabajadas*16;
-  }else{
-    horaExtra= horasTrabajadas - 40;
-    salario = ((40*16)+(horaExtra*20));
+  //DECLARACION VARIABLES
+  double horasTrabajadas, horaExtra, pagoHora, pagoTotal;
+
+  //ASINACION VARIABLES
+  pagoHora = 16;
+
+  //ENTRADA DATOS 
+  print("Ingrese numero de horas trabajadas");
+  horasTrabajadas = double.parse(stdin.readLineSync()!);
+
+  //PROCESOS - FORMULAS
+  if ( horasTrabajadas <= 40 ) { 
+    pagoTotal = horasTrabajadas * pagoHora;
+    print("El salario a pagar por las $horasTrabajadas horas es de: $pagoTotal COP");
   }
-print("La cantidad de horas trabajadas fueron $horasTrabajadas y el salario es $salario");
+  else {
+    horaExtra = horasTrabajadas - 40; 
+    pagoTotal = (horaExtra * 20) + (40 * pagoHora);
+    print("El salario a pagar es de 16 COP por hora");
+    print("La hora extra es de 20 COP");
+    print("Su pago es de $pagoTotal COP");
+  }
 }
