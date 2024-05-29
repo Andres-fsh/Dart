@@ -1,6 +1,7 @@
 import 'dart:io';
 
 void main(List<String> args) {
+  //ANDRÉS FELIPE SÁNCHEZ H
   // Declaración de variables
   String nombre;
   int horasTrabajadas;

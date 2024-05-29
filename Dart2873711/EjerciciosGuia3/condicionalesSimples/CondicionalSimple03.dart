@@ -14,7 +14,7 @@ double precioUnidad =10000;
 //ENTRADA LAG
 
 print("Ingrese la cantidad de trajes a comprar");
-cantTrajes = stdin.readLineSync() as int;
+cantTrajes = stdin.readLineSync()!;
 //PROCESO
 if (cantTrajes >= 3) {
     descuento = 0.17;

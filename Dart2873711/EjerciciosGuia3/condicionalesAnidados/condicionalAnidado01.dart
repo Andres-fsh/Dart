@@ -1,13 +1,9 @@
 import 'dart:io';
-
 void main(List<String> args) {
   //ANDRÉS FELIPE SÁNCHEZ H
-  /*
-  Dado tres números calcular el mayor
-  */
+  /*   Dado tres números calcular el mayor   */
    //DECLARACION VARIABLES
   double num1, num2, num3;
-
   //ENTRADA DATOS 
   print("Ingrese numero 1:");
   num1 = double.parse(stdin.readLineSync()!);

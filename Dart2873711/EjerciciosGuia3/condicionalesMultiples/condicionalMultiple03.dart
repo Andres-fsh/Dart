@@ -43,5 +43,4 @@ resultado = 0;
 print("No se puede realizar la operación");
 break;
 }
-
 }
