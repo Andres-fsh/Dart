@@ -1,3 +1,5 @@
+import 'dart:io';
+
 void main(List<String> args) {
   //ANDRÉS FELIPE SÁNCHEZ HURTADO
   /*
@@ -5,18 +7,35 @@ void main(List<String> args) {
   */
 
   //Declarar e inicializar variables
-  int control = 0;
-  double calif = 0.0;
-  double promedio = 0.0;
-  double max = 0.0;
-  double min = 100.0;
-  double suma = 0.0;
-  double prom = 0.0;
-  int cant = 0;
-  int i = 0;
-  int j = 0;
-  int k = 0;
-  int l = 0;
-  int m = 0;    
+  double calificacion, prom, mayorPromedio = 0, sumaCalific = 0;
+  int numControl = 0, cantEstudiantes, contador = 0;
   
+  //ENTRADA DATOS - PROCESOS FORMULAS - SALIDA DATOS. 
+  print("Cuantos estudiantes estan en el curso");
+  cantEstudiantes = int.parse(stdin.readLineSync()!);
+  do {
+    print("Estudiante # ${contador+1}");
+    for (int i = 0; i < 5; i++) {   
+    print("Digite la nota ${i+1}");
+    calificacion = double.parse(stdin.readLineSync()!);
+    while ( calificacion < 0 || calificacion > 5) {
+    print("Nota incorrecta, ingrese de nuevo la nota");
+    calificacion = double.parse(stdin.readLineSync()!);
+    }
+    sumaCalific += calificacion;
+    }
+    prom = sumaCalific / 5;
+    if ( prom > mayorPromedio ) {
+    mayorPromedio = prom;
+    numControl = contador + 1;
+    print("Hasta el momento el mayor promedio es: $mayorPromedio");
+    }
+    print('*' * 50);
+    contador++;
+  }
+  while ( contador < cantEstudiantes );
+
+  print("El mayor promedio es: $mayorPromedio");
+  print("El numero de control del mejor estudiante es: $numControl");
+
 }
