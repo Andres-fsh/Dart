@@ -13,8 +13,7 @@ double calificacion, promedioCalificaciones;
   //ENTRADA DATOS     
   print("Ingrese cantidad de alumnos:");
   alumnos = int.parse(stdin.readLineSync()!);
-  
-  //ENTRADA DATOS - PROCESOS - SALIDA DATOS.
+   //ENTRADA DATOS - PROCESOS - SALIDA DATOS.
   while ( contador < alumnos  ) {
   print("Ingrese la calificacion de alumno ${contador+1}:");
   calificacion =  double.parse(stdin.readLineSync()!);

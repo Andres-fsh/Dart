@@ -1,5 +1,4 @@
 import 'dart:io';
-
 void main(List<String> args) {
   //ANDRÉS FELIPE SÁNCHEZ HURTADO
   /*
@@ -9,22 +8,18 @@ void main(List<String> args) {
   List<double> calificaciones = [];
   double sumaCalificaciones = 0;
   double calificacionMasBaja = double.infinity;
-
   // Leer las calificaciones de los 40 alumnos
-  for (int i = 0; i < 40; i++) {
+  for (int i = 0; i < 4; i++) {
     print("Ingrese la calificación del alumno ${i + 1}:");
     double calificacion = double.parse(stdin.readLineSync()!);
-    
-    // Agregar la calificación a la lista
+        // Agregar la calificación a la lista
     calificaciones.add(calificacion);
-    
-    // Actualizar la suma de calificaciones y la calificación más baja
+        // Actualizar la suma de calificaciones y la calificación más baja
     sumaCalificaciones += calificacion;
     if (calificacion < calificacionMasBaja) {
       calificacionMasBaja = calificacion;
     }
   }
-
   // Calcular la calificación promedio
   double promedio = sumaCalificaciones / calificaciones.length;
 

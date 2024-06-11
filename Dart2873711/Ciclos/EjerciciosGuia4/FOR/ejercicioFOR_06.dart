@@ -14,7 +14,7 @@ Se debe solicitar la edad y el peso de cada persona y calcular y mostrar el prom
   // Definir variables para almacenar el total de pesos y el total de personas en cada categoría
   double pesoNinos = 0, pesoJovenes = 0, pesoAdultos = 0, pesoMayores = 0;
   int countNinos = 0, countJovenes = 0, countAdultos = 0, countMayores = 0;
-  int edad, cantPersonas=50;
+  int edad, cantPersonas=5;
   double peso;
 
   // Solicitar la edad y el peso de cada persona y calcular los totales por categoría

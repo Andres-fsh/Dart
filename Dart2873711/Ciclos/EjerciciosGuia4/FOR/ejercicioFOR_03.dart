@@ -11,7 +11,7 @@ void main(List<String> args) {
   int cero = 0;
 
   // Leer 20 números e incrementar los contadores
-  for (int i = 0; i < 20; i++) {
+  for (int i = 0; i < 5; i++) {
     print("Ingrese el número" +(i+1).toString() );
     int numero = int.parse(stdin.readLineSync()!);
     
@@ -23,7 +23,6 @@ void main(List<String> args) {
       cero++;
     }
   }
-
   // Imprimir los resultados
   print("Cantidad de números positivos: $positivos");
   print("Cantidad de números negativos: $negativos");

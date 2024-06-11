@@ -1,6 +1,7 @@
 import 'dart:io';
 
 void main(List<String> args) {
+  //ANDRÉS FELIPE SÁNCHEZ H
   /*
   Calcular el promedio de edades de hombres, mujeres y de todo un grupo de n alumnos.
   */
