@@ -13,16 +13,19 @@ Articulo 5           12         20          10
   */
   List<List<int>> matriz = [];
   List<int> production = [];
+  List<int> totalTurnos = [0,0,0];
   int cantFilas = 5, cantColumnas = 3;
   int mayor = 0;
   int suma = 0;
   int mayorProduction = 0, posicionMayor = 0;
+  
   for (int i = 0; i < cantFilas; i++) {
     List<int> fila = [];
     suma = 0;
     for (int j = 0; j < cantColumnas; j++) {
       print("Ingrese el elemento posicion $i,$j");
       int numero = int.parse(stdin.readLineSync()!);
+      totalTurnos[j]+=numero;
       suma += numero;
       if (numero > mayor) {
         mayor = numero;
@@ -47,6 +50,9 @@ Articulo 5           12         20          10
       posicionMayor = i;
     }
   }
+  for(int j =0; j < totalTurnos.length; j++){
+  print("Total del turno es ${j+1} es: ${totalTurnos[j]}");
+  }
   for (int i = 0; i < matriz.length; i++) {
     stdout.write("|"); //Cuando inicia una fila
     for (int j = 0; j < matriz[0].length; j++) {
@@ -55,5 +61,5 @@ Articulo 5           12         20          10
     print(""); //genera salto de linea
   }
   print(
-      "El articulo  con la de mayor produccion es el articulo ${posicionMayor + 1}, con una producción de ${mayorProduction}");
+      "El articulo  con la de mayor produccion es el articulo ${posicionMayor + 1}, con una producción de ${mayorProduction} uds");
 }
