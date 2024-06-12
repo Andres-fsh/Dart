@@ -38,11 +38,12 @@ Articulo 5           12         20          10
     production.add(suma);
     //lista de turnos
   }
-  print("*" * 30);
   for (int i = 0; i < cantFilas; i++) {}
   for (int i = 0; i < production.length; i++) {
     print("La cantidad total por articulo ${i + 1} es: ${production[i]}");
   }
+  
+  print("*"*50);
 //sacar el articulo con mayor produccion
   for (int i = 0; i < production.length; i++) {
     if (production[i] > mayorProduction) {
@@ -53,6 +54,8 @@ Articulo 5           12         20          10
   for(int j =0; j < totalTurnos.length; j++){
   print("Total del turno es ${j+1} es: ${totalTurnos[j]}");
   }
+  print("*"*50);
+  print("La matriz de turnos es la siguiente:");
   for (int i = 0; i < matriz.length; i++) {
     stdout.write("|"); //Cuando inicia una fila
     for (int j = 0; j < matriz[0].length; j++) {
@@ -60,6 +63,7 @@ Articulo 5           12         20          10
     }
     print(""); //genera salto de linea
   }
+  print("*"*90);
   print(
       "El articulo  con la de mayor produccion es el articulo ${posicionMayor + 1}, con una producción de ${mayorProduction} uds");
 }
